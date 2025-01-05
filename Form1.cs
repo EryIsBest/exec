@@ -1,4 +1,4 @@
-namespace Stardust
+namespace Stardust_Prototype
 {
     public partial class Form1 : Form
     {
@@ -7,13 +7,9 @@ namespace Stardust
             InitializeComponent();
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void Execute_Click(object sender, EventArgs e)
         {
-
-        }
-        private void Inject_Click(object sender, EventArgs e)
-        {
-            ForlornApi.Api.Inject();
+            ForlornApi.Api.ExecuteScript(richTextBox1.Text);
         }
 
         private void Clear_Click(object sender, EventArgs e)
@@ -21,19 +17,14 @@ namespace Stardust
             richTextBox1?.Clear();
         }
 
-        private void Execute_Click(object sender, EventArgs e)
-        {
-            ForlornApi.Api.ExecuteScript(richTextBox1.Text);
-        }
-
         private void KillRoblox_Click(object sender, EventArgs e)
         {
             ForlornApi.Api.KillRoblox();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Inject_Click(object sender, EventArgs e)
         {
-
+            ForlornApi.Api.Inject();
         }
     }
 }
